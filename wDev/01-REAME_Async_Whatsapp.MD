@@ -1,6 +1,6 @@
 # Processus d'Intégration Client WhatsApp – Automatisation avec FluxAsync
 
-**Objectif**
+**Objectif** 
 
     Permettre à un client (vendeur) de lier son compte WhatsApp Business à notre système afin que notre IA (basée sur Gemini) prenne en charge les conversations clients issues de campagnes sponsorisées (Facebook, Instagram, WhatsApp). L'objectif est de :
     •	Gérer automatiquement les discussions
