@@ -1,12 +1,14 @@
 import { Controller, Get } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
 import { AppService } from './app.service';
+import { Public } from './auth/decorators/public.decorator';
 
 @ApiTags('app')
 @Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
+  @Public()
   @Get()
   @ApiOperation({ summary: 'Endpoint de test - Hello World' })
   @ApiResponse({
@@ -17,6 +19,7 @@ export class AppController {
     return this.appService.getHello();
   }
 
+  @Public()
   @Get('health')
   @ApiOperation({ summary: 'Vérification de l\'état du serveur' })
   @ApiResponse({
@@ -27,6 +30,7 @@ export class AppController {
     return this.appService.getHealth();
   }
 
+  @Public()
   @Get('version')
   @ApiOperation({ summary: 'Version de l\'API FluxAsync' })
   @ApiResponse({

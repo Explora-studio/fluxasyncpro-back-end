@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenue sur FluxAsync !</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+        }
+        .title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 18px;
+            color: #6b7280;
+            margin-bottom: 30px;
+        }
+        .welcome-banner {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            margin: 30px 0;
+            color: white;
+        }
+        .welcome-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        .plan-info {
+            background-color: #f3f4f6;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #6366f1;
+        }
+        .plan-name {
+            font-size: 18px;
+            font-weight: 600;
+            color: #6366f1;
+            text-transform: uppercase;
+        }
+        .features {
+            background-color: #f8fafc;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+        .features h3 {
+            color: #1f2937;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .feature-list li {
+            padding: 8px 0;
+            color: #4b5563;
+            display: flex;
+            align-items: center;
+        }
+        .feature-icon {
+            margin-right: 10px;
+            font-size: 16px;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            margin: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(102, 126, 234, 0.3);
+            transition: transform 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 25px;
+            border-top: 1px solid #e5e7eb;
+            font-size: 14px;
+            color: #6b7280;
+            text-align: center;
+        }
+        .social-links {
+            margin: 20px 0;
+        }
+        .social-links a {
+            color: #6366f1;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .highlight {
+            font-weight: 600;
+            color: #6366f1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">⚡ FluxAsync</div>
+            <h1 class="title">Bienvenue à bord !</h1>
+            <p class="subtitle">Votre compte est maintenant activé et prêt à l'emploi</p>
+        </div>
+
+        <div class="welcome-banner">
+            <div class="welcome-icon">🎉</div>
+            <h2 style="margin: 0; font-size: 24px;">Félicitations {{name}} !</h2>
+            <p style="margin: 10px 0 0 0; opacity: 0.9;">Votre aventure FluxAsync commence maintenant</p>
+        </div>
+
+        <div class="plan-info">
+            <div class="plan-name">Plan {{planAbonnement}}</div>
+            <p style="margin: 5px 0 0 0; color: #6b7280;">
+                Vous avez choisi le plan parfait pour commencer votre transformation digitale
+            </p>
+        </div>
+
+        <div class="features">
+            <h3>🚀 Ce que vous pouvez faire dès maintenant :</h3>
+            <ul class="feature-list">
+                <li>
+                    <span class="feature-icon">📊</span>
+                    Accéder à votre tableau de bord personnalisé
+                </li>
+                <li>
+                    <span class="feature-icon">📧</span>
+                    Créer vos premières campagnes email marketing
+                </li>
+                <li>
+                    <span class="feature-icon">💬</span>
+                    Configurer l'automation WhatsApp Business
+                </li>
+                <li>
+                    <span class="feature-icon">🎯</span>
+                    Gérer vos prospects et clients
+                </li>
+                <li>
+                    <span class="feature-icon">📈</span>
+                    Analyser vos performances en temps réel
+                </li>
+                <li>
+                    <span class="feature-icon">🤖</span>
+                    Utiliser l'IA pour optimiser vos campagnes
+                </li>
+            </ul>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="{{dashboardUrl}}" class="cta-button">
+                🎯 Accéder à mon tableau de bord
+            </a>
+        </div>
+
+        <div style="background-color: #fef3cd; border-radius: 8px; padding: 20px; margin: 25px 0;">
+            <h4 style="color: #d68910; margin: 0 0 10px 0;">💡 Conseil pour bien commencer :</h4>
+            <p style="margin: 0; color: #856404;">
+                Prenez quelques minutes pour compléter votre profil et importer vos premiers contacts. 
+                Cela vous permettra de tirer le maximum de FluxAsync dès le premier jour !
+            </p>
+        </div>
+
+        <div class="footer">
+            <p>
+                <strong>Besoin d'aide ?</strong><br>
+                Notre équipe support est là pour vous accompagner dans vos premiers pas.
+            </p>
+            
+            <div class="social-links">
+                <a href="#">📧 Support</a>
+                <a href="#">📚 Documentation</a>
+                <a href="#">🎥 Tutoriels</a>
+            </div>
+            
+            <p>
+                <strong>L'équipe FluxAsync</strong><br>
+                🚀 Votre partenaire pour automatiser et développer votre business
+            </p>
+            
+            <p style="font-size: 12px; margin-top: 20px;">
+                Vous recevez cet email car vous venez de créer un compte sur FluxAsync.<br>
+                Si ce n'était pas vous, contactez-nous immédiatement.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

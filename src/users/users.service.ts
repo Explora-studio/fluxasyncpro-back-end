@@ -210,4 +210,8 @@ export class UsersService {
       ],
     });
   }
+
+  getRepository(): Repository<UtilisateurFluxasync> {
+  return this.usersRepository;
+}
 }
