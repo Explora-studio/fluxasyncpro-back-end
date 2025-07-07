@@ -72,6 +72,8 @@ export class UsersService {
         'plan_abonnement',
         'statut_abonnement',
         'compte_verifie',
+        'otp_verified',       
+        'last_login_at', 
         'date_creation',
         'date_modification',
       ],

@@ -1,0 +1,271 @@
+{
+	"info": {
+		"_postman_id": "8a6e3b7e-c723-44ec-a7f4-7e0e01ed0fe5",
+		"name": "02-UTILISATEUR FLUXASYNC",
+		"description": "| ENDPOINT | DESCRIPTION |\n| --- | --- |\n| `Limit` |  |\n|  |  |\n|  |  |\n\nCETTE COLLECTION VA NOUS PERMETTRE DE FAIRE DES REQUET DE GESTION DE NOS UTILISATEUR",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30909933",
+		"_collection_link": "https://devsohapigroup.postman.co/workspace/FluxAsyncpro_WorkSpace~7ed47f4c-dc66-4563-b0b5-44589f05cba6/collection/30909933-8a6e3b7e-c723-44ec-a7f4-7e0e01ed0fe5?action=share&source=collection_link&creator=30909933"
+	},
+	"item": [
+		{
+			"name": "INSCRIPTION",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nom\": \"Test\",\r\n    \"prenom\": \"Utilisateur\",\r\n    \"adresse_email\": \"debadychatue@gmail.com\",\r\n    \"numero_telephone\": \"+225 07 12 34 56 78\",\r\n    \"pays\": \"Côte d''Ivoire\",\r\n    \"secteur_activite\": \"Test\",\r\n    \"nom_entreprise\": \"Test SARL\",\r\n    \"mot_de_passe\": \"password123\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "01-INSCRIPTION D'UN COMPTE FLUXASYNC USER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nom\": \"Test\",\r\n    \"prenom\": \"User\",\r\n    \"adresse_email\": \"test2gg17@example.com\", \r\n    \"numero_telephone\": \"+225 07 11 22 33 45\",\r\n    \"pays\": \"Côte d'Ivoire\",\r\n    \"mot_de_passe\": \"password123\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VERIFICATION OTP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"adresse_email\": \"debadychatue@gmail.com\",\r\n    \"otp_code\": \"181889\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/auth/verify-otp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"verify-otp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "02-CONFIRMATION DE COMPTE PAR  l4UTILISATEUR",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"adresse_email\": \"test21@example.com\",\r\n    \"mot_de_passe\": \"password123\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users/validate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"validate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CONNEXION USER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"adresse_email\": \"debadychatue@gmail.com\",\r\n    \"mot_de_passe\": \"password123\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RECUP DONNEES USER CONNECTER",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJlbWFpbCI6ImRlYmFkeWNoYXR1ZUBnbWFpbC5jb20iLCJpYXQiOjE3NTE4NzI4MTUsImV4cCI6MTc1MTg3MzcxNX0.p40RZZPgOzHgTCYaP9ilyJUmOlxLjRJVGDTI8wF46qY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/auth/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ACCEDER AU DASHOARD",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJlbWFpbCI6ImRlYmFkeWNoYXR1ZUBnbWFpbC5jb20iLCJpYXQiOjE3NTE4NzI4MTUsImV4cCI6MTc1MTg3MzcxNX0.p40RZZPgOzHgTCYaP9ilyJUmOlxLjRJVGDTI8wF46qY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/auth/dashboard",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"dashboard"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "X-API-Key",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://farming-simulator.pstmn.io"
+		}
+	]
+}
